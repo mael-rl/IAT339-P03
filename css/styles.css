@@ -1,0 +1,234 @@
+/* i(M)RL - Marielle Reyes Lao
+
+/* ---------- colours ---------- */
+/* black:  #0A0A0A  (text)
+   white:  #FFFFFF  (background)
+   grey:   #F2F2F2  (image placeholders)
+   line:   #D4D4D4  (borders)
+   meta:   #5E5E5E  (small grey text)
+   yellow: #FFDD00  (accents only, always behind black text) */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+section {
+  padding: 96px 0;
+  border-top: 1px solid #d4d4d4;
+}
+
+/* ---------- type ---------- */
+/* headings are ALL CAPS, paragraphs stay normal so they're easy to read */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 16px 0;
+}
+
+h1 {
+  font-size: 50px;
+  text-transform: none;
+}
+h2 {
+  font-size: 38px;
+}
+h3 {
+  font-size: 28px;
+}
+
+p {
+  max-width: 600px;
+  margin: 0 0 16px 0;
+}
+
+.big-text {
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.grey {
+  color: #5e5e5e;
+  font-size: 14px;
+}
+
+/* yellow highlighter behind text */
+.highlight {
+  background: #ffdd00;
+  padding: 0 4px;
+}
+
+/* ---------- logo ---------- */
+.logo {
+  font-weight: bold;
+  letter-spacing: -0.04em;
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.logo span {
+  font-weight: 300; /* the thin ( ) */
+}
+
+.logo-big {
+  font-size: 180px;
+  line-height: 1;
+  margin: 32px 0;
+}
+
+/* ---------- header + menu ---------- */
+header {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #d4d4d4;
+  z-index: 10;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.menu a {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+/* ---------- links + buttons ---------- */
+a {
+  color: #0a0a0a;
+}
+
+a:hover {
+  background: #ffdd00;
+}
+
+a:focus {
+  outline: 2px solid #0a0a0a;
+  outline-offset: 3px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: 1px solid #0a0a0a;
+}
+
+.button:hover {
+  background: #ffdd00;
+  color: #0a0a0a;
+}
+
+.button-outline {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+/* ---------- index (list of everything) ---------- */
+.index a {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid #d4d4d4;
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.index a:hover {
+  padding-left: 16px;
+}
+
+/* ---------- rows columns ---------- */
+.row {
+  display: flex;
+  gap: 24px;
+}
+
+.col {
+  flex: 1;
+  text-align: center;
+}
+
+.col-wide {
+  flex: 2;
+}
+
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid #0a0a0a;
+  padding: 48px 0;
+}
+
+/* ---------- style guide ---------- */
+.swatch {
+  height: 120px;
+  border: 1px solid #d4d4d4;
+  margin-bottom: 8px;
+}
+
+/* ---------- phones ---------- */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .logo-big {
+    font-size: 80px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .menu a {
+    margin-left: 8px;
+  }
+}
